@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{f04a1691-8bf2-4d81-8fad-a9be5d6a64ab}</ProjectGuid>
+    <RootNamespace>psyPortfolio</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;GDIPVER=0x0110;_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\workspace\psy_Portfolio\psy_Portfolio\game;C:\workspace\psy_Portfolio\psy_Portfolio\std;C:\workspace\psy_Portfolio\psy_Portfolio\util;C:\workspace\OpenAL 1.1 SDK\include;C:\workspace\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\workspace\OpenAL 1.1 SDK\libs\Win32;C:\workspace\glew-2.1.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;GDIPVER=0x0110;_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\workspace\psy_Portfolio\psy_Portfolio\game;C:\workspace\psy_Portfolio\psy_Portfolio\std;C:\workspace\psy_Portfolio\psy_Portfolio\util;C:\workspace\OpenAL 1.1 SDK\include;C:\workspace\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\workspace\OpenAL 1.1 SDK\libs\Win32;C:\workspace\glew-2.1.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="game\App.h" />
+    <ClInclude Include="game\Common.h" />
+    <ClInclude Include="game\Entity.h" />
+    <ClInclude Include="game\Game.h" />
+    <ClInclude Include="game\Intro.h" />
+    <ClInclude Include="game\iWindow.h" />
+    <ClInclude Include="game\Loading.h" />
+    <ClInclude Include="game\ProcData.h" />
+    <ClInclude Include="game\Sprite.h" />
+    <ClInclude Include="game\Stage1A.h" />
+    <ClInclude Include="game\StageEditor.h" />
+    <ClInclude Include="game\Tilemap.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="std\iArray.h" />
+    <ClInclude Include="std\iColor.h" />
+    <ClInclude Include="std\iFBO.h" />
+    <ClInclude Include="std\iFPS.h" />
+    <ClInclude Include="std\iGraphics.h" />
+    <ClInclude Include="std\iImage.h" />
+    <ClInclude Include="std\iMatrix.h" />
+    <ClInclude Include="std\iOpenAL.h" />
+    <ClInclude Include="std\iOpenGL.h" />
+    <ClInclude Include="std\iParticleSystem.h" />
+    <ClInclude Include="std\iPoint.h" />
+    <ClInclude Include="std\iPopup.h" />
+    <ClInclude Include="std\iRect.h" />
+    <ClInclude Include="std\iShortestPath.h" />
+    <ClInclude Include="std\iSize.h" />
+    <ClInclude Include="std\iSort.h" />
+    <ClInclude Include="std\iStd.h" />
+    <ClInclude Include="std\iString.h" />
+    <ClInclude Include="std\iStrTex.h" />
+    <ClInclude Include="std\iType.h" />
+    <ClInclude Include="util\iDrop.h" />
+    <ClInclude Include="util\iNumber.h" />
+    <ClInclude Include="util\iShaderToy.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="game\App.cpp" />
+    <ClCompile Include="game\Common.cpp" />
+    <ClCompile Include="game\Entity.cpp" />
+    <ClCompile Include="game\Game.cpp" />
+    <ClCompile Include="game\glew.c" />
+    <ClCompile Include="game\Intro.cpp" />
+    <ClCompile Include="game\iWindow.cpp" />
+    <ClCompile Include="game\Loading.cpp" />
+    <ClCompile Include="game\ProcData.cpp" />
+    <ClCompile Include="game\Sprite.cpp" />
+    <ClCompile Include="game\Stage1A.cpp" />
+    <ClCompile Include="game\StageEditor.cpp" />
+    <ClCompile Include="game\Tilemap.cpp" />
+    <ClCompile Include="std\iArray.cpp" />
+    <ClCompile Include="std\iColor.cpp" />
+    <ClCompile Include="std\iFBO.cpp" />
+    <ClCompile Include="std\iFPS.cpp" />
+    <ClCompile Include="std\iGraphics.cpp" />
+    <ClCompile Include="std\iImage.cpp" />
+    <ClCompile Include="std\iMatrix.cpp" />
+    <ClCompile Include="std\iOpenAL.cpp" />
+    <ClCompile Include="std\iOpenGL.cpp" />
+    <ClCompile Include="std\iParticleSystem.cpp" />
+    <ClCompile Include="std\iPoint.cpp" />
+    <ClCompile Include="std\iPopup.cpp" />
+    <ClCompile Include="std\iRect.cpp" />
+    <ClCompile Include="std\iShortestPath.cpp" />
+    <ClCompile Include="std\iSize.cpp" />
+    <ClCompile Include="std\iSort.cpp" />
+    <ClCompile Include="std\iStd.cpp" />
+    <ClCompile Include="std\iString.cpp" />
+    <ClCompile Include="std\iStrTex.cpp" />
+    <ClCompile Include="util\iDrop.cpp" />
+    <ClCompile Include="util\iNumber.cpp" />
+    <ClCompile Include="util\iShaderToy.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="psy_Portfolio.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="psy_Portfolio.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
