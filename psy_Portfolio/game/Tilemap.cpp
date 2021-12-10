@@ -24,8 +24,6 @@ iSize sizeMap;
 Texture* texMinimap;
 void genEnemy(int kind, int level, int x, int y);
 
-// 각 레벨별로 모든 스테이지를 처음에 다 로드 하고 레벨이 안바뀌면 미리 로드해놓은 스테이지중에 랜덤으로
-// 스테이지 등장
 void loadMap(int level, const char* stageIndex)
 {
 	char stagePath[256];
@@ -82,10 +80,12 @@ iPoint drawMap()
 {
 	int i, j;
 
+#if 0
 	fbo->bind(texMinimap);
 	glClearColor(0, 0, 0, 0.6f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	fbo->unbind();
+#endif
 
 	iPoint off = iPointMake(devSize.width/2, devSize.height/2) - hero->pos;
 	if (off.x > 0)
@@ -114,12 +114,9 @@ iPoint drawMap()
 
 			drawImage(tex, tileW * j + off.x, tileH * i + off.y, TOP | LEFT,
 				0, 0, tex->width, tex->height, tileScale, tileScale, 2, 0);
-			//fbo->bind(texMinimap);
-			//drawImage(tex, TILEWIDTH * j / 10.f, TILEHEIGHT * i / 10.f, TOP | LEFT, 0, 0, tex->width, tex->height,
-			//	0.1 * tileScale, 0.1 * tileScale, 2, 0);
-			//fbo->unbind();
 		}
 	}
+#if 0
 	fbo->bind(texMinimap);
 	for (i = 0; i < tileY; i++)
 	{
@@ -136,6 +133,7 @@ iPoint drawMap()
 		}
 	}
 	fbo->unbind();
+#endif
 	return off;
 }
 

@@ -29,12 +29,6 @@ void loadGame()
 
 	setStringNameEng;
 
-
-#if 0
-	gameState = gs_stageedit;
-	loadStageEditor();
-	return;
-#endif
 	loadCommon();
 
 	loadIntro();

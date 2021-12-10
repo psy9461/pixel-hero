@@ -139,7 +139,6 @@ Sprite::Sprite(const char* szFormat, ...)
 			memcpy(path, &buf[len], sizeof(char) * lenPath); len += sizeof(char) * lenPath;
 			path[lenPath] = 0;
 			f->t = new Tex;
-			// 여기가 조금 문제가 있다
 			f->t->path = path;
 			f->t->tex = addTextureInTex(path);
 			memcpy(&f->p, &buf[len], sizeof(iPoint)); len += sizeof(iPoint);

@@ -126,6 +126,7 @@ void drawStage1A(float dt)
 	drawEnemy(dt, off);
 	drawHero(dt, off);
 
+#if 0
 	fbo->bind(texMinimap);
 	setRGBA(0, 1, 0, 1);
 	fillRect((hero->pos.x - hero->rtCol.size.width / 2) / 10.f, (hero->pos.y - hero->rtCol.size.height) / 10.0f,
@@ -145,6 +146,7 @@ void drawStage1A(float dt)
 	setGLBlend(GLBlendMultiplied);
 	drawImage(t, devSize.width, devSize.height, BOTTOM | RIGHT, 0, 0, t->width, t->height, 1.0f, 1.0f, 2, 0, REVERSE_HEIGHT);
 	setGLBlend(GLBlendAlpha);
+#endif
 
 	off += hero->pos;
 
